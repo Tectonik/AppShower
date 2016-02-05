@@ -2,13 +2,12 @@
 	'use strict';
 
 	const constants = require('./../helpers/constants');
-	let everliveLocation = constants.EVERLIVE_LOCATION,
-		Everlive = require('./../everlive.all.js'),
+	let Everlive = require('./../everlive.all.js'),
 		el = new Everlive('9unql0fug2904yqd');
 	//let myQuery = new everlive.Query();
 	//myQuery.where().isin('Name', ['Doncho', 'Evlogi']);
 
-	let telerikCourseData = el.data('TelerikCourse');
+	// let telerikCourseData = el.data('TelerikCourse');
 
 	function getAllWithQuery(typeData,query) {
 		return new Promise((resolve, reject) => {
