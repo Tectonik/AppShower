@@ -1,24 +1,15 @@
 (function() {
 	'use strict';
 	let express = require('express'),
-		bodyParser = require('body-parser');
+		bodyParser = require('body-parser')
+		constants = require('./helpers/constants.js');
 
 	var app = express();
 	app.use(bodyParser.json());
 
-	app.set('port', (process.env.PORT || 13337));
+	app.set('port', (process.env.PORT || 1337));
 
-	app.use(express.static(__dirname + '/public'));
-
-	// views is directory for all template files
-	app.set('views', __dirname + '/views');
-	app.set('view engine', 'ejs');
-
-	app.get('/', function(request, response) {
-		response.render('pages/index');
-	});
-
-	app.listen(app.get('port'), function() {
+	app.listen(constants.PORT, function() {
 		console.log('Node app is running on port', app.get('port'));
 	});
 }());
