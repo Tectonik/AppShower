@@ -4,10 +4,7 @@
     const currentRouter = 'accounts';
     console.log(`${currentRouter} router loaded`);
 
-    const constants = require('./../helpers/constants');
     let express = require('express'),
-        helpers = require('./../helpers/helpers'),
-        mapper = require('./../helpers/mapper'),
         data = require('./../data/data.js'),
         db = data.initialize(),
         myRouter = express.Router(),
@@ -15,20 +12,20 @@
 
     myRouter
     // (request, result, next)
-        .put('/login', function (request, result) {
+        .put('/login', function (request, response) {
             let user = request.body,
                 password = user.Password,
                 username = user.Username;
 
             db.authentication.login(username, password, function (dataObj) {
-                result
+                response
                     .status(201)
                     .json({
                         result: "User logged in successfully",
                         tokenInfo: dataObj
                     });
             }, function (error) {
-                result
+                response
                     .status(404)
                     .json({
                         result: "User has not been logged in ",
@@ -38,15 +35,15 @@
                 console.log(error);
             });
         })
-        .put('/logout', function (request, result) {
+        .put('/logout', function (request, response) {
             db.authentication.logout(function () {
-                result
+                response
                     .status(201)
                     .json({
                         result: "User logged out successfully"
                     });
             }, function (error) {
-                result
+                response
                     .status(404)
                     .json({
                         result: "User has not been logged out ",
@@ -56,7 +53,7 @@
                 console.log(error);
             });
         })
-        .post('/register', function (request, result) {
+        .post('/register', function (request, response) {
             let newUser = request.body,
                 password = newUser.Password,
                 username = newUser.Username,
@@ -71,14 +68,14 @@
 
             db.Users.register(username, password, otherAttributes,
                 function (dataObj) {
-                    result
+                    response
                         .status(201)
                         .json({
                             result: "User created successfully"
                         });
                 },
                 function (error) {
-                    result
+                    response
                         .status(404)
                         .json({
                             result: "User has not been created",

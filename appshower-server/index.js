@@ -10,6 +10,6 @@
     app.use(bodyParser.json());
 
     app.listen(constants.PORT, function () {
-        console.log(`Patrick is running on port ${constants.PORT}`);
+        console.log(`Not-Voltron is running on port ${constants.PORT}`);
     });
 } ());
