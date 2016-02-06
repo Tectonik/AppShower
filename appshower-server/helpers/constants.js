@@ -5,13 +5,15 @@
         EVERLIVE_LOCATION = './../everlive.all',
         // Not Voltron
         PORT = 13337,
-        ROUTERS_LOCATION = './routers';
+        ROUTERS_LOCATION = './routers',
+        MAPPER_LOCATION = './../helpers/mapper';
 
     module.exports = {
         EVERLIVE_LOCATION,
         PORT,
         EVERLIVE_API_KEY,
-        ROUTERS_LOCATION
+        ROUTERS_LOCATION,
+        MAPPER_LOCATION
     };
 
 } ());

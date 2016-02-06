@@ -4,10 +4,10 @@
     function mapDbProjectToClientModel(videosCollection) {
         let resultCollection = [];
 
-        videosCollection.forEach(video => {
+        videosCollection.forEach(project => {
             resultCollection.push({
-                Id: video.Id,
-                Title: video.Title
+                Id: project.Id,
+                Title: project.Title
             });
         });
 
