@@ -3,13 +3,13 @@
 
 	const constants = require('./../helpers/constants');
 	let Everlive = require('everlive-sdk'),
-		el = new Everlive('9unql0fug2904yqd');
+		el = new Everlive('4l7wacjxymhqahsg');
 	//let myQuery = new everlive.Query();
 	//myQuery.where().isin('Name', ['Doncho', 'Evlogi']);
 
 	// let telerikCourseData = el.data('TelerikCourse');
 
-	function getAllWithQuery(typeData,query) {
+	function getAllWithQuery(typeData, query) {
 		return new Promise((resolve, reject) => {
 			typeData
 				.get(query)
@@ -23,7 +23,7 @@
 	}
 
 	module.exports = {
-		init: function() {
+		initialize: function() {
 			return el;
 		},
 		createQuery: function() {
