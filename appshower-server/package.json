@@ -1,34 +1,36 @@
 {
-	"name": "server",
-	"version": "0.1.5",
-	"description": "A server. What else do you need?",
-	"main": "index.js",
-	"scripts": {
-		"start": "node index.js",
-		"test": "nodemon index.js"
-	},
-	"dependencies": {
-		"body-parser": "^1.14.2",
-		"ejs": "2.3.3",
-		"express": "4.13.3",
-        "everlive-sdk": "1.6.4"
-	},
-	"engines": {
-		"node": "0.12.7"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/heroku/node-js-getting-started.git"
-	},
-	"keywords": [
-		"node",
-		"heroku",
-		"express"
-	],
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/heroku/node-js-getting-started/issues"
-	},
-	"homepage": "https://github.com/heroku/node-js-getting-started#readme",
-	"author": "waiter"
+    "name": "server",
+    "version": "0.1.5",
+    "description": "A server. What else do you need?",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "test": "nodemon index.js"
+    },
+    "dependencies": {
+        "body-parser": "^1.14.2",
+        "ejs": "2.3.3",
+        "express": "4.13.3",
+        "everlive-sdk": "^1.6.4",
+        "async": "^1.5.2"
+    },
+    "engines": {
+        "node": "0.12.7"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/heroku/node-js-getting-started.git"
+    },
+    "keywords": [
+        "node",
+        "heroku",
+        "express"
+    ],
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/heroku/node-js-getting-started/issues"
+    },
+    "homepage": "https://github.com/heroku/node-js-getting-started#readme",
+    "author": "waiter",
+    "devDependencies": {}
 }
