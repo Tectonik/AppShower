@@ -11,4 +11,5 @@
             .filter(file => file !== 'index.js')
             .forEach(file => require(`./${file}`).initialize(app));
     };
+
 }());

@@ -22,7 +22,7 @@
                         .status(200)
                         .json({
                             result: mapper
-                                .mapDbVideoModelToClientModel(result)
+                                .mapDbProjectToClientModel(result)
                         });
 
                     console.log(`get on ${currentRouter} successful`);
@@ -57,4 +57,5 @@
             app.use('/api/projects', myRouter);
         }
     };
+
 } ());

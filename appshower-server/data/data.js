@@ -32,4 +32,5 @@
 		data: el.data,
 		getAllWithQuery: getAllWithQuery
 	};
+
 }());
