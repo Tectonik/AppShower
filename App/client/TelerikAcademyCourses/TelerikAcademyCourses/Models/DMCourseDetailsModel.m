@@ -16,7 +16,7 @@
         self.desc = description;
         self.date = date;
         self.topics = topics;
-        
+
     }
     return self;
 }

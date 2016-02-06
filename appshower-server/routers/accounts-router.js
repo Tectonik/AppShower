@@ -1,4 +1,4 @@
-(function() {
+(function () {
     'use strict';
 
     const currentRouter = 'accounts';
@@ -12,19 +12,19 @@
 
     myRouter
     // (request, result, next)
-        .put('/login', function(request, response) {
+        .put('/login', function (request, response) {
             let user = request.body,
                 password = user.Password,
                 username = user.Username;
 
-            db.authentication.login(username, password, function(dataObj) {
+            db.authentication.login(username, password, function (dataObj) {
                 response
                     .status(201)
                     .json({
                         result: "User logged in successfully",
                         tokenInfo: dataObj
                     });
-            }, function(error) {
+            }, function (error) {
                 response
                     .status(404)
                     .json({
@@ -35,14 +35,14 @@
                 console.log(error);
             });
         })
-        .put('/logout', function(request, response) {
-            db.authentication.logout(function() {
+        .put('/logout', function (request, response) {
+            db.authentication.logout(function () {
                 response
                     .status(201)
                     .json({
                         result: "User logged out successfully"
                     });
-            }, function(error) {
+            }, function (error) {
                 response
                     .status(404)
                     .json({
@@ -53,7 +53,7 @@
                 console.log(error);
             });
         })
-        .post('/register', function(request, response) {
+        .post('/register', function (request, response) {
             let newUser = request.body,
                 password = newUser.Password,
                 username = newUser.Username,
@@ -67,14 +67,14 @@
                 };
 
             db.Users.register(username, password, otherAttributes,
-                function(dataObj) {
+                function (dataObj) {
                     response
                         .status(201)
                         .json({
                             result: "User created successfully"
                         });
                 },
-                function(error) {
+                function (error) {
                     response
                         .status(404)
                         .json({
@@ -89,9 +89,9 @@
     module.exports = {
         controller: {},
         typeData: currentTypeData,
-        initialize: function(app) {
+        initialize: function (app) {
             app.use('/api/auth', myRouter);
         }
     };
 
-}());
+} ());
