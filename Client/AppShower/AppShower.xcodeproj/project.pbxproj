@@ -13,6 +13,10 @@
 		5BD641DC1C68032A00FE4B83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BD641DA1C68032A00FE4B83 /* Main.storyboard */; };
 		5BD641DE1C68032B00FE4B83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BD641DD1C68032B00FE4B83 /* Assets.xcassets */; };
 		5BD641E11C68032B00FE4B83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BD641DF1C68032B00FE4B83 /* LaunchScreen.storyboard */; };
+		5BD641EB1C68040900FE4B83 /* ProjectsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD641EA1C68040900FE4B83 /* ProjectsTableViewController.swift */; };
+		5BD641ED1C6805D200FE4B83 /* AddProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD641EC1C6805D200FE4B83 /* AddProjectViewController.swift */; };
+		5BD641EF1C6805F200FE4B83 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD641EE1C6805F200FE4B83 /* UserProfileViewController.swift */; };
+		5BD641F11C68060B00FE4B83 /* ProjectDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD641F01C68060B00FE4B83 /* ProjectDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		5BD641DD1C68032B00FE4B83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BD641E01C68032B00FE4B83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BD641E21C68032B00FE4B83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BD641EA1C68040900FE4B83 /* ProjectsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsTableViewController.swift; sourceTree = "<group>"; };
+		5BD641EC1C6805D200FE4B83 /* AddProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProjectViewController.swift; sourceTree = "<group>"; };
+		5BD641EE1C6805F200FE4B83 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		5BD641F01C68060B00FE4B83 /* ProjectDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 		5BD641D31C68032A00FE4B83 /* AppShower */ = {
 			isa = PBXGroup;
 			children = (
+				5BD641E91C68038400FE4B83 /* ViewControllers */,
 				5BD641D41C68032A00FE4B83 /* AppDelegate.swift */,
 				5BD641D61C68032A00FE4B83 /* FirstViewController.swift */,
 				5BD641D81C68032A00FE4B83 /* SecondViewController.swift */,
@@ -65,6 +74,17 @@
 				5BD641E21C68032B00FE4B83 /* Info.plist */,
 			);
 			path = AppShower;
+			sourceTree = "<group>";
+		};
+		5BD641E91C68038400FE4B83 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5BD641EA1C68040900FE4B83 /* ProjectsTableViewController.swift */,
+				5BD641EC1C6805D200FE4B83 /* AddProjectViewController.swift */,
+				5BD641EE1C6805F200FE4B83 /* UserProfileViewController.swift */,
+				5BD641F01C68060B00FE4B83 /* ProjectDetailsViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +159,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BD641D91C68032A00FE4B83 /* SecondViewController.swift in Sources */,
+				5BD641EF1C6805F200FE4B83 /* UserProfileViewController.swift in Sources */,
 				5BD641D51C68032A00FE4B83 /* AppDelegate.swift in Sources */,
 				5BD641D71C68032A00FE4B83 /* FirstViewController.swift in Sources */,
+				5BD641F11C68060B00FE4B83 /* ProjectDetailsViewController.swift in Sources */,
+				5BD641ED1C6805D200FE4B83 /* AddProjectViewController.swift in Sources */,
+				5BD641EB1C68040900FE4B83 /* ProjectsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
