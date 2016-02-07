@@ -24,19 +24,19 @@
 
             data
                 .getAllWithQuery("Project")
-                .then(function (result) {
-
-                    response.status(200).json(result);
-
-                }, function (error) {
-                    response.status(500).json(error);
-                });
+                .then(
+                    function (result) {
+                        response.status(200).json(result);
+                    },
+                    function (error) {
+                        response.status(500).json(error);
+                    });
         });
 
     module.exports = {
         controller: {},
         initialize: function (app) {
-            app.use('/api/initialize', myRouter);
+            app.use('/api/fake-data', myRouter);
         }
     };
 
