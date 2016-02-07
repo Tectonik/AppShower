@@ -21,6 +21,7 @@
 		5BD641F81C68079000FE4B83 /* MRTProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD641F71C68079000FE4B83 /* MRTProject.swift */; };
 		5BD641FA1C6807B300FE4B83 /* MRTOffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD641F91C6807B300FE4B83 /* MRTOffer.swift */; };
 		5BD641FC1C6807C200FE4B83 /* MRTUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD641FB1C6807C200FE4B83 /* MRTUser.swift */; };
+		5BD641FE1C68083700FE4B83 /* MRTComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD641FD1C68083700FE4B83 /* MRTComment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		5BD641F71C68079000FE4B83 /* MRTProject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRTProject.swift; sourceTree = "<group>"; };
 		5BD641F91C6807B300FE4B83 /* MRTOffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRTOffer.swift; sourceTree = "<group>"; };
 		5BD641FB1C6807C200FE4B83 /* MRTUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRTUser.swift; sourceTree = "<group>"; };
+		5BD641FD1C68083700FE4B83 /* MRTComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRTComment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				5BD641F71C68079000FE4B83 /* MRTProject.swift */,
 				5BD641F91C6807B300FE4B83 /* MRTOffer.swift */,
 				5BD641FB1C6807C200FE4B83 /* MRTUser.swift */,
+				5BD641FD1C68083700FE4B83 /* MRTComment.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				5BD641F61C68076000FE4B83 /* RemoteData.swift in Sources */,
 				5BD641EF1C6805F200FE4B83 /* UserProfileViewController.swift in Sources */,
 				5BD641D51C68032A00FE4B83 /* AppDelegate.swift in Sources */,
+				5BD641FE1C68083700FE4B83 /* MRTComment.swift in Sources */,
 				5BD641FA1C6807B300FE4B83 /* MRTOffer.swift in Sources */,
 				5BD641F81C68079000FE4B83 /* MRTProject.swift in Sources */,
 				5BD641D71C68032A00FE4B83 /* FirstViewController.swift in Sources */,
