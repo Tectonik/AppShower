@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ProjectsTableViewController: UITableViewController {
     
@@ -26,6 +27,12 @@ class ProjectsTableViewController: UITableViewController {
         
         self.allProjects = appDelegate.data.allPojects!;
         
+        Alamofire.request(.GET, "https://github.com/Tectonik/AppShower")
+            .response {
+                (request, response, data, error) -> Void in
+                    print(data)
+            }
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -37,10 +44,10 @@ class ProjectsTableViewController: UITableViewController {
         let storyboardId = "AddProjectScene"
         
         let addProjectVc = self.storyboard?.instantiateViewControllerWithIdentifier(storyboardId) as!
-            AddProjectViewController
+        AddProjectViewController
         
         addProjectVc.title = "Add new project"
-            
+        
         self.navigationController?.pushViewController(addProjectVc, animated: true)
     }
     
@@ -72,7 +79,7 @@ class ProjectsTableViewController: UITableViewController {
         let projectCellIdentifier = "projectCell";
         
         var cell = tableView.dequeueReusableCellWithIdentifier(projectCellIdentifier)
-//        self.tableView.registerClass(cell.class, forHeaderFooterViewReuseIdentifier: projectCell)
+        //        self.tableView.registerClass(cell.class, forHeaderFooterViewReuseIdentifier: projectCell)
         
         if (cell == nil) {
             cell = UITableViewCell.init(style: UITableViewCellStyle.Default, reuseIdentifier: projectCellIdentifier)
