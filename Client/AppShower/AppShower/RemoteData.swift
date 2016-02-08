@@ -10,4 +10,10 @@ import UIKit
 
 class RemoteData: NSObject {
 
+    var allPojects:[MRTProject]?
+    
+    init() {
+        
+    }
+    
 }

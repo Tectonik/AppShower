@@ -12,7 +12,8 @@
         "ejs": "2.3.3",
         "express": "4.13.3",
         "everlive-sdk": "^1.6.4",
-        "async": "^1.5.2"
+        "async": "^1.5.2",
+        "underscore": "^1.8.3"
     },
     "engines": {
         "node": "0.12.7"

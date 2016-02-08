@@ -13,7 +13,7 @@
         myRouter = express.Router();
 
     myRouter
-        .get('/comments', function (request, response) {
+        .get('/', function (request, response) {
 
             // data.createInstanceOfType('Project', { Name: "My little pony" })
             //     .then(function (results) {
