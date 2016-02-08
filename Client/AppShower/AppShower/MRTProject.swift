@@ -9,10 +9,10 @@
 import UIKit
 
 enum projectStatus {
-    case A
-    case B
-    case C
-    case D
+    case Waiting
+    case Funded
+    case Cancelled
+    case Unknown
 }
 
 
@@ -22,15 +22,38 @@ class MRTProject: NSObject {
     let startedAt: NSDate?
     let authors: [MRTUser]?
     let status: projectStatus?
-    let estimatedBudget: String?
-    let potentialIssues: String?
+    let estimatedBudget: NSDecimalNumber?
+    let potentialIssues: [String]?
     let flexibility: String?
     let strategy: String?
     let mission: String?
     let goal: String?
     let name: String?
     
-    init() {
-        code
+    init(projectId: String,
+        startedAt: NSDate,
+        authors: [MRTUser],
+        status: projectStatus,
+        estimatedBudget: NSDecimalNumber,
+        potentialIssues: [String],
+        flexibility: String,
+        strategy: String,
+        mission: String,
+        goal: String,
+        name: String) {
+            
+            self.projectId = projectId
+            self.projectId = projectId
+            self.projectId = projectId
+            self.projectId = projectId
+            self.projectId = projectId
+            self.projectId = projectId
+            self.projectId = projectId
+            self.projectId = projectId
+            self.projectId = projectId
+            self.projectId = projectId
+            self.projectId = projectId
+            self.projectId = projectId
+            
     }
 }
