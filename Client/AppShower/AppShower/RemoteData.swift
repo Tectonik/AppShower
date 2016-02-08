@@ -24,6 +24,8 @@ class RemoteData {
     
     func addNewProject(newProject: MRTProject) {
         self.allPojects?.append(newProject)
+        
+        
     }
     
 }
