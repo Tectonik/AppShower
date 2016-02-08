@@ -12,7 +12,8 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    internal var data: RemoteData
+    var data: RemoteData
+    var currenUser: MRTUser?
     
     override init() {
         self.data = RemoteData.init()

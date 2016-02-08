@@ -16,12 +16,16 @@ class MRTUser: NSObject {
     let username: String?
     let email: String?
     let comments: [MRTComment]?
+    var receivedOffers: [MRTOffer]?
+    var sentOffers: [MRTOffer]?
     
     init (id: String?,
         displayName: String?,
         password: String?,
         username: String?,
         email: String?,
+        receivedOffers: [MRTOffer]?,
+        sentOffers: [MRTOffer]?,
         comments: [MRTComment]?) {
             
             self.id = id
@@ -30,6 +34,8 @@ class MRTUser: NSObject {
             self.username = username
             self.email = email
             self.comments = comments
+            self.receivedOffers = receivedOffers
+            self.sentOffers = sentOffers
     }
     
 }

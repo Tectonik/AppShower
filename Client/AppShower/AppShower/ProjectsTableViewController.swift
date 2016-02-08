@@ -11,19 +11,48 @@ import UIKit
 class ProjectsTableViewController: UITableViewController {
     
     var allProjects: [MRTProject] = [];
+    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        self.title="All projects"
         
-        self.allProjects = delegate.data.allPojects!;
+        let addProjectBarButton = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "showAdd")
+        self.navigationItem.rightBarButtonItem = addProjectBarButton
+        
+        let searchProjectBarButton = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.Search, target: self, action: "showSearch")
+        self.navigationItem.leftBarButtonItem = searchProjectBarButton
+        
+        self.allProjects = appDelegate.data.allPojects!;
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    func showAdd() {
+        let storyboardId = "AddProjectScene"
+        
+        let addProjectVc = self.storyboard?.instantiateViewControllerWithIdentifier(storyboardId) as!
+            AddProjectViewController
+        
+        addProjectVc.title = "Add new project"
+            
+        self.navigationController?.pushViewController(addProjectVc, animated: true)
+    }
+    
+    func showSearch() {
+        let storyboardId = "SearchProjectScene"
+        
+        let searchProjectVc = self.storyboard?.instantiateViewControllerWithIdentifier(storyboardId) as!
+        SearchProjectViewController
+        
+        searchProjectVc.title = "Find a project"
+        
+        self.navigationController?.pushViewController(searchProjectVc, animated: true)
     }
     
     override func didReceiveMemoryWarning() {
@@ -40,8 +69,9 @@ class ProjectsTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let projectCellIdentifier = "projectCell";
         
-        var cell = tableView.dequeueReusableCellWithIdentifier("projectCell")
+        var cell = tableView.dequeueReusableCellWithIdentifier(projectCellIdentifier)
 //        self.tableView.registerClass(cell.class, forHeaderFooterViewReuseIdentifier: projectCell)
         
         if (cell == nil) {
@@ -51,6 +81,16 @@ class ProjectsTableViewController: UITableViewController {
         cell!.textLabel?.text = self.allProjects[indexPath.row].name
         
         return cell!
+    }
+    
+    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        let storyboardId = "ProjectDetailsScene"
+        
+        let detailsVc = self.storyboard?.instantiateViewControllerWithIdentifier(storyboardId) as! ProjectDetailsViewController
+        
+        detailsVc.title=self.allProjects[indexPath.row].name
+        
+        self.navigationController?.pushViewController(detailsVc, animated: true)
     }
     
     /*
