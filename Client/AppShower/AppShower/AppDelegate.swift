@@ -12,12 +12,18 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let data: RemoteData
+    internal var data: RemoteData
+    
+    override init() {
+        self.data = RemoteData.init()
+        print(self.data.allPojects![1].name)
+    }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        self.data.n
+        self.data = RemoteData.init()
+        print(self.data.allPojects![0].name)
         
         return true
     }

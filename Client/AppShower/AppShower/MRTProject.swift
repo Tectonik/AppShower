@@ -28,7 +28,7 @@ class MRTProject: NSObject {
     let strategy: String?
     let mission: String?
     let goal: String?
-    let name: String?
+    let name: String!
     
     init(id: String?,
         startedAt: NSDate?,
@@ -40,7 +40,7 @@ class MRTProject: NSObject {
         strategy: String?,
         mission: String?,
         goal: String?,
-        name: String?) {
+        name: String!) {
             
             self.id = id
             self.startedAt = startedAt

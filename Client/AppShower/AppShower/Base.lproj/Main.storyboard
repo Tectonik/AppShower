@@ -85,21 +85,12 @@
         <!--All Projects-->
         <scene sceneID="aJW-Q4-ixP">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pFu-F2-iX0" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="a6N-KU-OFI" customClass="ProjectsTableViewController" customModule="AppShower" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="eC7-yD-7Ve">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="eZQ-5L-RJS">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eZQ-5L-RJS" id="TFL-hK-ERn">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="a6N-KU-OFI" id="QIK-iJ-rBn"/>
                             <outlet property="delegate" destination="a6N-KU-OFI" id="8BR-1P-R4Y"/>
@@ -107,7 +98,6 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="All Projects" image="first" id="08d-63-IOf"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pFu-F2-iX0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="798"/>
         </scene>
