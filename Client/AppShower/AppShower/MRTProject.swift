@@ -18,7 +18,7 @@ enum projectStatus {
 
 class MRTProject: NSObject {
     
-    let projectId: String?
+    let id: String?
     let startedAt: NSDate?
     let authors: [MRTUser]?
     let status: projectStatus?
@@ -30,30 +30,28 @@ class MRTProject: NSObject {
     let goal: String?
     let name: String?
     
-    init(projectId: String,
-        startedAt: NSDate,
-        authors: [MRTUser],
-        status: projectStatus,
-        estimatedBudget: NSDecimalNumber,
-        potentialIssues: [String],
-        flexibility: String,
-        strategy: String,
-        mission: String,
-        goal: String,
-        name: String) {
+    init(id: String?,
+        startedAt: NSDate?,
+        authors: [MRTUser]?,
+        status: projectStatus?,
+        estimatedBudget: NSDecimalNumber?,
+        potentialIssues: [String]?,
+        flexibility: String?,
+        strategy: String?,
+        mission: String?,
+        goal: String?,
+        name: String?) {
             
-            self.projectId = projectId
-            self.projectId = projectId
-            self.projectId = projectId
-            self.projectId = projectId
-            self.projectId = projectId
-            self.projectId = projectId
-            self.projectId = projectId
-            self.projectId = projectId
-            self.projectId = projectId
-            self.projectId = projectId
-            self.projectId = projectId
-            self.projectId = projectId
-            
+            self.id = id
+            self.startedAt = startedAt
+            self.authors = authors
+            self.status = status
+            self.estimatedBudget = estimatedBudget
+            self.potentialIssues = potentialIssues
+            self.flexibility = flexibility
+            self.strategy = strategy
+            self.mission = mission
+            self.goal = goal
+            self.name = name
     }
 }
