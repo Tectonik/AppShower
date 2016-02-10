@@ -12,4 +12,4 @@
             .forEach(file => require(`./${file}`).initialize(app));
     };
 
-}());
+} ());

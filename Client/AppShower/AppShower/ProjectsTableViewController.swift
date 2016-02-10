@@ -27,11 +27,11 @@ class ProjectsTableViewController: UITableViewController {
         
         self.allProjects = appDelegate.data.allPojects!;
         
-        Alamofire.request(.GET, "https://github.com/Tectonik/AppShower")
-            .response {
-                (request, response, data, error) -> Void in
-                    print(data)
-            }
+//        Alamofire.request(.GET, "https://github.com/Tectonik/AppShower")
+//            .response {
+//                (request, response, data, error) -> Void in
+//                    print(data)
+//            }
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

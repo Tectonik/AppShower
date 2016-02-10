@@ -1,60 +1,72 @@
 (function () {
     'use strict';
 
-    const currentRouter = 'projects';
+    const currentRouter = 'projects',
+        constants = require('./../helpers/constants');
+
     console.log(`${currentRouter} router loaded`);
 
-    const constants = require('./../helpers/constants');
     let express = require('express'),
         helpers = require('./../helpers/helpers'),
         mapper = require('./../helpers/mapper'),
         data = require('./../data/data.js'),
         db = data.initialize(),
-        myRouter = express.Router(),
-        currentTypeData = db.data('Projects');
+        router = express.Router(),
+        currentType = db.data('Project');
 
-    myRouter
-        .get('/', function (request, response) {
-            data
-                .getAllWithQuery(currentTypeData)
-                .then(function (result) {
-                    response
-                        .status(200)
-                        .json({
-                            result: mapper
-                                .mapDbProjectToClientModel(result)
+    router
+        .get('/',
+            function (request, response) {
+                data
+                    .getAllWithQuery(currentType)
+                    .then(
+                        function (result) {
+                            console.log(`get on ${currentRouter} successful`);
+                            response
+                                .status(200)
+                                .json({
+                                    result: mapper
+                                    [`mapDb${currentType}ToClientModel`](result)
+                                });
+                        },
+                        function (error) {
+                            console.log(`get on ${currentRouter} unsuccessful. Error: \n    ${error}`);
+                            response
+                                .status(500)
+                                .json({
+                                    error: error.message
+                                });
                         });
+            },
+            function (error) {
 
-                    console.log(`get on ${currentRouter} successful`);
-                },
-                    function (error) {
-                        console.log(`get on ${currentRouter} unsuccessful`);
-                        response.status(500).json({
-                            error: error.message
-                        });
-                    });
-        }, function (error) {
+                console.log(error);
 
-            console.log(error);
-        })
-        .put('/', function (request, response) {
+            })
+        .put('/',
+            function (request, response) {
 
-        }, function (error) {
+            },
+            function (error) {
 
-            console.log(error);
-        })
-        .post('/', function (request, response) {
+                console.log(error);
 
-        }, function (error) {
+            })
+        .post('/',
+            function (request, response) {
 
-            console.log(error);
-        });
+            },
+            function (error) {
+
+                console.log(error);
+
+            });
 
     module.exports = {
         controller: {},
-        typeData: currentTypeData,
+        type: currentType,
         initialize: function (app) {
-            app.use('/api/projects', myRouter);
+            app.use('/api/projects', router);
         }
     };
 

@@ -14,8 +14,11 @@
         return resultCollection;
     }
 
+    
+
     module.exports = {
-        mapDbProjectToClientModel
+        mapDbProjectToClientModel,
+        helperName : "mapper"
     };
 
 } ());

@@ -11,7 +11,7 @@ import Alamofire
 
 class RemoteData {
     
-    var allPojects:[MRTProject]?
+    private var allPojects:[MRTProject]?
     
     init() {
         self.allPojects = [
@@ -24,10 +24,21 @@ class RemoteData {
     }
     
     func addNewProject(newProject: MRTProject) {
+        
         self.allPojects?.append(newProject)
-    
-
         
     }
+    
+//    func addNewProject(newProject: MRTProject) {
+//        
+//        self.allPojects?.append(newProject)
+//        
+//    }
+//    
+//    func addNewProject(newProject: MRTProject) {
+//        
+//        self.allPojects?.append(newProject)
+//        
+//    }
     
 }

@@ -8,37 +8,38 @@
         data = require('./../data/data.js'),
         db = data.initialize(),
         myRouter = express.Router(),
-        currentTypeData = db.data('Users');
+        currentType = db.data('Users');
 
     myRouter
     // (request, result, next)
-        .put('/login', function (request, response) {
-            let user = request.body,
-                password = user.Password,
-                username = user.Username;
+        .put('/login',
+            function (request, response) {
+                let user = request.body,
+                    password = user.Password,
+                    username = user.Username;
 
-            db
-                .authentication
-                .login(username, password,
-                    function (dataObj) {
-                        response
-                            .status(201)
-                            .json({
-                                result: "User logged in successfully",
-                                tokenInfo: dataObj
-                            });
-                    },
-                    function (error) {
-                        response
-                            .status(404)
-                            .json({
-                                result: "User has not been logged in ",
-                                error: error.message
-                            });
+                db
+                    .authentication
+                    .login(username, password,
+                        function (dataObj) {
+                            response
+                                .status(201)
+                                .json({
+                                    result: "User logged in successfully",
+                                    tokenInfo: dataObj
+                                });
+                        },
+                        function (error) {
+                            response
+                                .status(404)
+                                .json({
+                                    result: "User has not been logged in ",
+                                    error: error.message
+                                });
 
-                        console.log(error);
-                    });
-        })
+                            console.log(error);
+                        });
+            })
         .put('/logout',
             function (request, response) {
                 db
@@ -98,7 +99,7 @@
 
     module.exports = {
         controller: {},
-        typeData: currentTypeData,
+        type: currentType,
         initialize: function (app) {
             app.use('/api/auth', myRouter);
         }

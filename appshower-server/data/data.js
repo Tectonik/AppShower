@@ -23,9 +23,10 @@
                     }
                 })
                 .get(query)
-                .then(function (response) {
-                    resolve(response.result);
-                },
+                .then(
+                    function (response) {
+                        resolve(response.result);
+                    },
                     function (error) {
                         reject(error);
                     });
@@ -34,16 +35,12 @@
 
     function createInstanceOfType(type, instance) {
         return new Promise((resolve, reject) => {
-
-            return new Promise((resolve, reject) => { });
-
+            // return new Promise((resolve, reject) => { });
             el.data(type)
                 .create(instance)
                 .then(function (response) {
-
                     let temp = [];
                     temp.push(response.result);
-
                     resolve({
                         result: mapper[`mapDb${type}ModelToClientModel`](temp),
                         successful: true

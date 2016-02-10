@@ -34,7 +34,8 @@
         });
 
     module.exports = {
-        controller: {},
+        controller:
+        {},
         initialize: function (app) {
             app.use('/api/fake-data', myRouter);
         }
